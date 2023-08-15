@@ -8,7 +8,9 @@
     },
     "type": "module",
     "dependencies": {
-        "marked": "^5.1.0"
+        "@types/marked": "^5.0.1",
+        "himalaya": "^1.1.0",
+        "marked": "^7.0.3"
     },
     "devDependencies": {
         "@types/uuid": "^9.0.2",

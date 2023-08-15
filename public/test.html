@@ -1,14 +1,4 @@
-import DomNode from "../lib/DomNode.js";
-
-export default class Layout {
-  constructor(
-    private title: string,
-    private index: string,
-    private content: DomNode,
-  ) {}
-
-  public build() {
-    return `<!DOCTYPE html>
+<!DOCTYPE html>
     <html>
     
     <head>
@@ -16,7 +6,7 @@ export default class Layout {
         <meta name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-        <title>${this.title}</title>
+        <title>Test! - NFTChatRoom.com Docs</title>
         <link rel="stylesheet" type="text/css" href="/bundle.css" />
     </head>
     
@@ -30,16 +20,15 @@ export default class Layout {
             </header>
             <main>
                 <div class="doc-index">
-                    ${this.index}
+                    <ul><li><details open="open"><summary>NFTChatRoom.com</summary><ul><li><a href='/'>Introduction</a></li><li><a href='/test'>Test</a></li></ul></details></li></ul>
                 </div>
                 <div class="doc-wrapper">
-                    ${this.content.build()}
+                    <div class="doc-view markdown-body"><h1>Test!</h1>
+</div>
                 </div>
             </main>
         </div>
         <script src="/bundle.js"></script>
     </body>
     
-    </html>`;
-  }
-}
+    </html>

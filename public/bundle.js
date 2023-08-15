@@ -1,0 +1,1 @@
+(()=>{"use strict";const t=document.querySelector(".layout .doc-index"),e=document.querySelector(".layout .doc-index-button");t&&e&&(e.addEventListener("click",(()=>{e.classList.toggle("on"),t.classList.toggle("active")})),window.innerWidth>859&&e.click())})();
