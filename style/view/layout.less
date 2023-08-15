@@ -88,25 +88,72 @@
                 overflow-y: scroll;
 
                 >li {
+                    margin-bottom: 4px;
+
+                    &:not(:has(details)) {
+                        margin-left: 18px;
+                        position   : relative;
+
+                        &::before {
+                            content         : "";
+                            display         : block;
+                            position        : absolute;
+                            left            : -18px;
+                            top             : -2px;
+                            width           : 16px;
+                            height          : 16px;
+                            background-image: url("/images/doc.png");
+                            background-size : 16px 16px;
+                            content         : " ";
+                        }
+
+                        >a {
+                            user-select: none;
+                            cursor     : pointer;
+                            display    : inline-flex;
+                            align-items: center;
+                            gap        : 4px;
+
+                            >img {
+                                width : 32px;
+                                height: 32px;
+                            }
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        &.active {
+                            >a {
+                                background-color: var(--dialog-blue);
+                                outline         : 1px solid var(--dialog-blue);
+                                color           : var(--button-highlight);
+                                font-weight     : bold;
+                            }
+                        }
+                    }
+
                     >details {
                         >summary {
-                            margin-bottom: 3px;
+                            margin-left  : 18px;
+                            position     : relative;
+                            margin-bottom: 4px;
                             user-select  : none;
                             cursor       : pointer;
                             display      : inline;
 
-                            &:before {
-                                text-align      : center;
+                            &::before {
+                                content         : "";
                                 display         : block;
-                                float           : left;
-                                content         : "+";
-                                border          : 1px solid #808080;
-                                width           : 11px;
-                                height          : 11px;
-                                line-height     : 8px;
-                                margin-right    : 5px;
-                                padding-left    : 1px;
-                                background-color: #fff;
+                                position        : absolute;
+                                left            : -20px;
+                                top             : -2px;
+                                width           : 16px;
+                                height          : 16px;
+                                background-image: url("/images/doc-folder.png");
+                                background-size : 16px 16px;
+                                content         : " ";
                             }
 
                             &:focus {
@@ -115,39 +162,29 @@
                         }
 
                         &[open]>summary:before {
-                            content: "-";
+                            background-image: url("/images/doc-folder-open.png");
                         }
 
                         >ul {
-                            margin-bottom: 3px;
+                            margin-bottom: 4px;
                             margin-left  : 16px;
                             padding-left : 16px;
-                            /* Goes down too far */
-                            border-left  : 1px dotted #808080;
 
                             >li {
-                                margin-bottom: 3px;
+                                margin-bottom: 4px;
                                 position     : relative;
 
                                 &::before {
-                                    content      : "";
-                                    display      : block;
-                                    position     : absolute;
-                                    left         : -16px;
-                                    top          : 6px;
-                                    width        : 12px;
-                                    border-bottom: 1px dotted #808080;
-                                }
-
-                                &:last-child::after {
-                                    content   : "";
-                                    display   : block;
-                                    position  : absolute;
-                                    left      : -20px;
-                                    top       : 7px;
-                                    bottom    : 0px;
-                                    width     : 8px;
-                                    background: var(--button-highlight);
+                                    content         : "";
+                                    display         : block;
+                                    position        : absolute;
+                                    left            : -18px;
+                                    top             : -2px;
+                                    width           : 16px;
+                                    height          : 16px;
+                                    background-image: url("/images/doc.png");
+                                    background-size : 16px 16px;
+                                    content         : " ";
                                 }
 
                                 >a {
