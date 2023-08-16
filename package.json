@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "start": "nodemon --exec 'node generate.js' --watch './dist/**/*.js'",
+        "start": "nodemon --exec 'node generate.js' --watch './dist/**/*.js' --watch './docs/**/*.md' -e js,md",
         "webpack-dev": "webpack --mode development --watch --config webpack.config.dev.cjs",
         "webpack-prod": "webpack --mode production --config webpack.config.prod.cjs",
         "predeploy": "node generate.js && yarn webpack-prod",

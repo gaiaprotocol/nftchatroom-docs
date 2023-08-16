@@ -14,3 +14,16 @@ if (docIndex && docIndexButton) {
     docIndexButton.click();
   }
 }
+
+const detailsElements = document.querySelectorAll("details");
+detailsElements.forEach((detail, index) => {
+  const isOpened = localStorage.getItem("details-" + index);
+  if (isOpened !== null) {
+    detail.open = isOpened === "true";
+  }
+});
+detailsElements.forEach((detail, index) => {
+  detail.addEventListener("toggle", function () {
+    localStorage.setItem("details-" + index, detail.open ? "true" : "false");
+  });
+});
