@@ -1382,17 +1382,17 @@ img {
   background: var(--button-highlight);
   box-shadow: var(--border-field);
   padding: 6px;
+  padding-left: 24px;
   flex-grow: 1;
   overflow-y: scroll;
 }
-.layout > main > .doc-index > ul > li {
+.layout > main > .doc-index > ul li {
   margin-bottom: 4px;
 }
-.layout > main > .doc-index > ul > li:not(:has(details)) {
-  margin-left: 18px;
+.layout > main > .doc-index > ul li:not(:has(details)) {
   position: relative;
 }
-.layout > main > .doc-index > ul > li:not(:has(details))::before {
+.layout > main > .doc-index > ul li:not(:has(details))::before {
   content: "";
   display: block;
   position: absolute;
@@ -1404,35 +1404,34 @@ img {
   background-size: 16px 16px;
   content: " ";
 }
-.layout > main > .doc-index > ul > li:not(:has(details)) > a {
+.layout > main > .doc-index > ul li:not(:has(details)) > a {
   user-select: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 4px;
 }
-.layout > main > .doc-index > ul > li:not(:has(details)) > a > img {
+.layout > main > .doc-index > ul li:not(:has(details)) > a > img {
   width: 32px;
   height: 32px;
 }
-.layout > main > .doc-index > ul > li:not(:has(details)) > a:hover {
+.layout > main > .doc-index > ul li:not(:has(details)) > a:hover {
   text-decoration: underline;
 }
-.layout > main > .doc-index > ul > li:not(:has(details)).active > a {
+.layout > main > .doc-index > ul li:not(:has(details)).active > a {
   background-color: var(--dialog-blue);
   outline: 1px solid var(--dialog-blue);
   color: var(--button-highlight);
   font-weight: bold;
 }
-.layout > main > .doc-index > ul > li > details > summary {
-  margin-left: 18px;
+.layout > main > .doc-index > ul li > details > summary {
   position: relative;
   margin-bottom: 4px;
   user-select: none;
   cursor: pointer;
   display: inline;
 }
-.layout > main > .doc-index > ul > li > details > summary::before {
+.layout > main > .doc-index > ul li > details > summary::before {
   content: "";
   display: block;
   position: absolute;
@@ -1444,52 +1443,15 @@ img {
   background-size: 16px 16px;
   content: " ";
 }
-.layout > main > .doc-index > ul > li > details > summary:focus {
+.layout > main > .doc-index > ul li > details > summary:focus {
   outline: 1px dotted #000000;
 }
-.layout > main > .doc-index > ul > li > details[open] > summary:before {
+.layout > main > .doc-index > ul li > details[open] > summary:before {
   background-image: url("/images/doc-folder-open.png");
 }
-.layout > main > .doc-index > ul > li > details > ul {
+.layout > main > .doc-index > ul li > details > ul {
   margin-bottom: 4px;
   margin-left: 16px;
-  padding-left: 16px;
-}
-.layout > main > .doc-index > ul > li > details > ul > li {
-  margin-bottom: 4px;
-  position: relative;
-}
-.layout > main > .doc-index > ul > li > details > ul > li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -18px;
-  top: -2px;
-  width: 16px;
-  height: 16px;
-  background-image: url("/images/doc.png");
-  background-size: 16px 16px;
-  content: " ";
-}
-.layout > main > .doc-index > ul > li > details > ul > li > a {
-  user-select: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-.layout > main > .doc-index > ul > li > details > ul > li > a > img {
-  width: 32px;
-  height: 32px;
-}
-.layout > main > .doc-index > ul > li > details > ul > li > a:hover {
-  text-decoration: underline;
-}
-.layout > main > .doc-index > ul > li > details > ul > li.active > a {
-  background-color: var(--dialog-blue);
-  outline: 1px solid var(--dialog-blue);
-  color: var(--button-highlight);
-  font-weight: bold;
 }
 .layout > main > .doc-wrapper {
   flex-grow: 1;
