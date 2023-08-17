@@ -47,3 +47,4 @@ privacy protection in the digital world.
 - Twitter: https://twitter.com/Gaia_Protocol
 - Discord: https://discord.gg/gaiaprotocol
 - Telegram: https://t.me/gaiaprotocol
+- GitHub: https://github.com/gaiaprotocol

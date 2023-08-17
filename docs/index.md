@@ -1,5 +1,6 @@
 - NFTChatRoom.com
   - [Introduction](introduction.md)
+  - [What is Room Profile](room-profile.md)
   - NFT
     - [What is NFT?](nft/nft.md)
     - [How to Buy NFTs](nft/buy-nft.md)
@@ -9,4 +10,5 @@
     - [How to Create Ethereum Wallet](ethereum/create-wallet.md)
     - [How to Purchase Ethereum](ethereum/buy-ethereum.md)
   - [Open Source](opensource.md)
+  - [Release Notes](releases.md)
 - [BUIDL by Gaia Protocol](gaiaprotocol.md)
